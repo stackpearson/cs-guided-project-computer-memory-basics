@@ -18,6 +18,29 @@
 
 
 def csRaindrops(number):
+    sound = []
 
+    if number % 3 < 1:
+        sound.append('Pling')
+    else:
+        pass
+    
+    if number % 5 < 1:
+        sound.append('Plang')
+    else:
+        pass
+
+    if number % 7 < 1:
+        sound.append('Plong')
+    else:
+        pass
+
+    if len(sound) > 0:
+        return str(''.join(sound))
+    else:
+        return str(number)
 
 print(csRaindrops(28))
+print(csRaindrops(30))
+print(csRaindrops(2))
+print(csRaindrops(1))
