@@ -18,6 +18,18 @@
 
 
 def csBinaryToASCII(binary):
+    #seperate string into sub strings 8 chars in length
+    if len(binary) > 0:
+        sliced_list = [(binary[i:i+8]) for i in range(0, len(binary), 8)]
 
+        char_list = []
+
+        for i in sliced_list:
+            char_list.append(chr(int(i[:8], 2)))
+
+        return ''.join(char_list)
+    else:
+        return ''
 
 print(csBinaryToASCII("011011000110000101101101011000100110010001100001"))
+print(csBinaryToASCII(""))
